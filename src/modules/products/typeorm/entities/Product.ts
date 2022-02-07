@@ -14,11 +14,14 @@ class Product {
   @Column()
   name: string;
 
-  @Column('decimal')
-  price: number;
+  @Column()
+  description: string;
 
   @Column('decimal')
   calories: number;
+
+  @Column('decimal')
+  price: number;
 
   @Column('int')
   quantity: number;
