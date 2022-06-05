@@ -16,31 +16,31 @@ export class CreateProducts1607437608841 implements MigrationInterface {
           },
 
           {
-            name: 'name',
+            name: 'nomeRefeicao',
             type: 'varchar',
           },
 
           {
-            name: 'description',
+            name: 'descricaoRefeicao',
             type: 'varchar',
           },
 
           {
-            name: 'calories',
+            name: 'calorias',
             type: 'decimal',
             precision: 10,
             scale: 2,
           },
 
           {
-            name: 'price',
+            name: 'valor',
             type: 'decimal',
             precision: 10,
             scale: 2,
           },
 
           {
-            name: 'quantity',
+            name: 'quantidadeRefeicao',
             type: 'int',
           },
 

@@ -12,19 +12,19 @@ class Product {
   id: string;
 
   @Column()
-  name: string;
+  nomeRefeicao: string;
 
   @Column()
-  description: string;
+  descricaoRefeicao: string;
 
   @Column('decimal')
-  calories: number;
+  calorias: number;
 
   @Column('decimal')
-  price: number;
+  valor: number;
 
   @Column('int')
-  quantity: number;
+  quantidadeRefeicao: number;
 
   @CreateDateColumn()
   created_at: Date;

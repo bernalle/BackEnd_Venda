@@ -25,34 +25,46 @@ export default class ProductsRepository {
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { name, description, calories, price, quantity } = request.body;
+    const {
+      nomeRefeicao,
+      descricaoRefeicao,
+      calorias,
+      valor,
+      quantidadeRefeicao,
+    } = request.body;
 
     const createProduct = new CreateProductService();
 
     const product = await createProduct.execute({
-      name,
-      description,
-      calories,
-      price,
-      quantity,
+      nomeRefeicao,
+      descricaoRefeicao,
+      calorias,
+      valor,
+      quantidadeRefeicao,
     });
 
     return response.json(product);
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { name, description, calories, price, quantity } = request.body;
+    const {
+      nomeRefeicao,
+      descricaoRefeicao,
+      calorias,
+      valor,
+      quantidadeRefeicao,
+    } = request.body;
     const { id } = request.params;
 
     const updateProduct = new UpdateProductService();
 
     const product = await updateProduct.execute({
       id,
-      name,
-      description,
-      calories,
-      price,
-      quantity,
+      nomeRefeicao,
+      descricaoRefeicao,
+      calorias,
+      valor,
+      quantidadeRefeicao,
     });
 
     return response.json(product);

@@ -21,11 +21,11 @@ productsRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().required(),
-      description: Joi.string().required(),
-      calories: Joi.number().precision(2).required(),
-      price: Joi.number().precision(2).required(),
-      quantity: Joi.number().required(),
+      nomeRefeicao: Joi.string().required(),
+      descricaoRefeicao: Joi.string().required(),
+      calorias: Joi.number().precision(2).required(),
+      valor: Joi.number().precision(2).required(),
+      quantidadeRefeicao: Joi.number().required(),
     },
   }),
   productsController.create,
@@ -35,11 +35,11 @@ productsRouter.put(
   '/:id',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().required(),
-      description: Joi.string().required(),
-      calories: Joi.number().precision(2).required(),
-      price: Joi.number().precision(2).required(),
-      quantity: Joi.number().required(),
+      nomeRefeicao: Joi.string().required(),
+      descricaoRefeicao: Joi.string().required(),
+      calorias: Joi.number().precision(2).required(),
+      valor: Joi.number().precision(2).required(),
+      quantidadeRefeicao: Joi.number().required(),
     },
     [Segments.PARAMS]: {
       id: Joi.string().uuid().required(),

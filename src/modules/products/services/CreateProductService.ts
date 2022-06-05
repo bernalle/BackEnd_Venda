@@ -4,34 +4,34 @@ import Product from '../typeorm/entities/Product';
 import { ProductRepository } from '../typeorm/repositories/ProductsRepository';
 
 interface IRequest {
-  name: string;
-  description: string;
-  calories: number;
-  price: number;
-  quantity: number;
+  nomeRefeicao: string;
+  descricaoRefeicao: string;
+  calorias: number;
+  valor: number;
+  quantidadeRefeicao: number;
 }
 
 class CreateProductService {
   public async execute({
-    name,
-    description,
-    calories,
-    price,
-    quantity,
+    nomeRefeicao,
+    descricaoRefeicao,
+    calorias,
+    valor,
+    quantidadeRefeicao,
   }: IRequest): Promise<Product> {
     const productsRepository = getCustomRepository(ProductRepository);
-    const productExists = await productsRepository.findByName(name);
+    const productExists = await productsRepository.findByName(nomeRefeicao);
 
     if (productExists) {
       throw new AppError('Já existe um produto com o mesmo nome!');
     }
 
     const product = productsRepository.create({
-      name,
-      description,
-      calories,
-      price,
-      quantity,
+      nomeRefeicao,
+      descricaoRefeicao,
+      calorias,
+      valor,
+      quantidadeRefeicao,
     });
 
     await productsRepository.save(product);

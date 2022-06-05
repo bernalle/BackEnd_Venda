@@ -5,21 +5,21 @@ import { ProductRepository } from '../typeorm/repositories/ProductsRepository';
 
 interface IRequest {
   id: string;
-  name: string;
-  description: string;
-  calories: number;
-  price: number;
-  quantity: number;
+  nomeRefeicao: string;
+  descricaoRefeicao: string;
+  calorias: number;
+  valor: number;
+  quantidadeRefeicao: number;
 }
 
 class UpdateProductService {
   public async execute({
     id,
-    name,
-    description,
-    calories,
-    price,
-    quantity,
+    nomeRefeicao,
+    descricaoRefeicao,
+    calorias,
+    valor,
+    quantidadeRefeicao,
   }: IRequest): Promise<Product> {
     const productsRepository = getCustomRepository(ProductRepository);
 
@@ -29,17 +29,17 @@ class UpdateProductService {
       throw new AppError('Produto não encontrado.');
     }
 
-    const productExists = await productsRepository.findByName(name);
+    const productExists = await productsRepository.findByName(nomeRefeicao);
 
-    if (productExists && name !== product.name) {
+    if (productExists && nomeRefeicao !== product.nomeRefeicao) {
       throw new AppError('Já existe um produto com o mesmo nome!');
     }
 
-    product.name = name;
-    product.description;
-    product.calories;
-    product.price;
-    product.quantity;
+    product.nomeRefeicao = nomeRefeicao;
+    product.descricaoRefeicao;
+    product.calorias;
+    product.valor;
+    product.quantidadeRefeicao;
 
     await productsRepository.save(product);
 

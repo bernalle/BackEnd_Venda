@@ -15,36 +15,6 @@ export class CreateOrders1644804541169 implements MigrationInterface {
           },
 
           {
-            name: 'customerName',
-            type: 'varchar',
-          },
-
-          {
-            name: 'customerCpf',
-            type: 'int',
-          },
-
-          {
-            name: 'adressCep',
-            type: 'int',
-          },
-
-          {
-            name: 'adressLougradouro',
-            type: 'varchar',
-          },
-
-          {
-            name: 'addressNumero',
-            type: 'int',
-          },
-
-          {
-            name: 'adressComplemento',
-            type: 'varchar',
-          },
-
-          {
             name: 'formaPagamento',
             type: 'int',
           },

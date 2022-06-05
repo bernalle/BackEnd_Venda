@@ -26,22 +26,22 @@ export class CreateCustomer1644804032986 implements MigrationInterface {
           },
 
           {
-            name: 'adressCep',
+            name: 'cep',
             type: 'int',
           },
 
           {
-            name: 'adressLougradouro',
+            name: 'lougradouro',
             type: 'varchar',
           },
 
           {
-            name: 'addressNumero',
+            name: 'numero',
             type: 'int',
           },
 
           {
-            name: 'adressComplemento',
+            name: 'complemento',
             type: 'varchar',
           },
 
