@@ -1,7 +1,8 @@
-<h1>Backend_Venda</h1>
-<h3>Pt. Um projeto da faculdade que simula uma loja online.</h3>
-<h3>En. A college project that simulates an online marketplace.</h3>
+<h1 align="center">Backend_Venda</h1>
 
+<p align="center"> English after portuguese.
+
+<h3 align="center">Pt. Um projeto da faculdade que simula uma loja online.</h3>
 
 <p>
 <b>Pt.</b> O objetivo desse trabalho é utilizar dos conhecimentos aprendindos na disciplina de "Banco de Dados I", para a criação de um MVP que contemple todo o escopo do CRUD, ou seja,(Criação) Create, (Leitura) Read, (Atualização) Update e (Remoção) Delete, em um banco de dados SQL. <br  />
@@ -16,6 +17,8 @@ Para isso foi utilizado das linguagens de programação <b>TypeScript e SQl</b>,
 </ul>
 </p>
 <br  />
+
+<h3 align="center">En. A college project that simulates an online marketplace.</h3>
 
 <p>
 <b>En.</b> The objective of this project is to use the knowledge obtained in the "Database I" classes, to build an MVP solution that uses all the CRUD methods.<br  />
